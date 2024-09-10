@@ -1,0 +1,124 @@
+
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,body{
+    width: 100%;
+    height: 100dvh;
+    background: #fefefe;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+    /* background: #f4f4f4; */
+    background: #f5edd1;
+}
+
+.wrapper .envelop::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    border-top:  130px solid #ecdeb8;
+    border-left: 212px solid transparent;
+    border-right: 212px solid transparent;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+    z-index: 4;
+}
+
+.wrapper .envelop::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    border-top:  130px solid transparent;
+    border-left: 212px solid #e6cfa7;
+    border-bottom: 100px solid #e6cfa7;
+    border-right: 212px solid #e6cfa7;
+    transform-origin: top;
+    transition: all 0.5s ease-in-out 0.7s;
+    z-index: 4;
+}
+
+.wrapper .envelop{
+    position: relative;
+    width: 425px;
+    height: 230px;
+}
+
+.envelop .letter {
+    position: absolute;
+    width: 64%;
+    height: 100%; /* Ensure it fits within the envelope */ /* Make sure it doesn't exceed the height of the envelope */
+    background: #fff;
+    padding: 1.5rem;
+    padding-top: 1rem;
+    right: 20%;
+    bottom: 0;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    transition: all 1s ease-in-out;
+    overflow: hidden; /* Hide overflow content when the envelope is closed */
+    z-index: 2;
+}
+
+.envelop .letter .text{
+    color: #706e6e;
+    font-size: 0.7em;
+}
+
+.heart{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-85%, -60%) rotate(45deg);
+    transform-origin: bottom;
+    z-index: 5;
+}
+
+.heart::before,.heart::after{
+    position: absolute;
+    content: '';
+    background: red;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.heart::before{
+    top: -7.5px;
+}
+
+.heart::after{
+    right: 7.5px;
+}
+
+.wrapper.open .heart{
+    transform: translate(-20%,-40%) rotate(230deg);
+    transition-delay: 1s;
+}
+
+.wrapper.open .envelop::before{
+    transform: rotateX(180deg);
+    z-index: 0;
+}
+.wrapper.open .envelop .letter {
+
+    bottom: 100px;
+    transform: scale(2);
+    transition-delay: 1s;
+    z-index: 999;
+    overflow: visible; /* Allow content to expand when opened */
+}
