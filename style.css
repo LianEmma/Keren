@@ -73,8 +73,13 @@ html,body{
 
 .envelop .letter .text{
     color: #706e6e;
-    font-size: 0.7em;
+    font-size: 0.5em;
 }
+.envelop .letter h4{
+    color: #706e6e;
+    font-size: 0.5em;
+}
+
 
 .heart{
     width: 20px;
@@ -115,7 +120,7 @@ html,body{
     z-index: 0;
 }
 .wrapper.open .envelop .letter {
-
+    /* height: 45dvh; */
     bottom: 100px;
     transform: scale(2);
     transition-delay: 1s;
