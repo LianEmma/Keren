@@ -25,18 +25,6 @@ html, body {
 } */
 
 /* Default Styles (Desktop) */
-.wrapper {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 10%;
-    width: 425px; /* Default width for larger screens */
-    max-width: 100%; /* Ensure it doesn’t exceed the screen width */
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
-    background: #f5edd1;
-    z-index: 33;
-}
-
 
 /* Envelope Styles */
 .wrapper .envelop::before {
@@ -318,22 +306,54 @@ html, body {
     }
 }
 
+/* Default wrapper styles (for larger screens) */
+.wrapper {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    width: 425px; /* Default width for larger screens */
+    max-width: 100%; /* Ensure it doesn’t exceed the screen width */
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3);
+    background: #f5edd1;
+    z-index: 33;
+}
 
 /* Media Query for Tablets */
 @media screen and (max-width: 768px) {
     .wrapper {
-        width: 80%; /* Set width relative to screen size */
-        max-width: 350px; /* Ensure max width for smaller screens */
+        width: 80%; /* 80% of the screen width */
+        max-width: 350px; /* Maximum width for tablets */
         bottom: 15%; /* Adjust positioning if necessary */
     }
 }
 
-/* Media Query for Mobile Phones *
+/* Media Query for Mobile Phones */
 @media screen and (max-width: 480px) {
     .wrapper {
-        left: 2%;
-        width: 50%; /* Wider width for mobile screens 
-        max-width: 10px; /* Ensure max width for very small screens      bottom: 20%; /* Adjust positioning if necessary 
+        width: 20%; /* Set width to 90% of the screen for mobile phones */
+        max-width: 150px; /* Ensure the wrapper doesn’t exceed 300px */
+        bottom: 14%; /* Adjust positioning if necessary */
+        left: 0%; /* Slightly adjust position from the left */
+        transform: translateX(0); /* No horizontal centering needed */
+    }
+
+    .envelop .letter {
+        left: 25%;
+        width: 40%; /* Adjust letter width for mobile */
+    }
+
+    .letter .text, .letter h4 {
+        font-size: 0.4em; /* Make text smaller for mobile */
+    }
+
+    .heart{
+        position: fixed;
+        left: 260%;
     }
 }
-*/
+
+/* Ensure float text and other small elements adjust as well */
+.float-text {
+    font-size: 0.8em; /* Adjust float text size for smaller screens */
+}
