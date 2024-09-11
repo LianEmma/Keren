@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Welcome</title>
+    <title>Keren | Love you so Much</title>
 </head>
 <body>
+    <main>
     <div class="wrapper">
         <div class="envelop">
             <div class="letter"> 
                 <h4 style="color: darkred; margin-bottom: 8px;">Dearest Keren</h4> 
-                <p class="text">
-                     As the stars twinkle above us tonight, I can't help but think
-                     how lucky I am to know someone like you. Your presence brings
-                     a kind of brightness that makes everything feel a little more special.  
-                    </p> <br>
-
-                     <p class="text"> 
-                         I find myself often thinking about you, and every time I do,
-                         it puts a smile on my face. There's something about your kindness
-                         and warmth that I truly appreciate, 
-                         and I'm excited to see where this journey takes us. 
-                    </p> <br>
-                    
-                    <p class="text">  
-                        For now, just know that you mean a lot to me.
-                    </p> 
-
-                    <p class="text" style="margin-top: 20px;"> With warmest thoughts,<br> <strong style="font-size: 0.9em;">[Emmanuel Kayemba]</strong> </p> </div>
-                        
+                <p class="text">As the stars twinkle above us tonight, I can't help but think how lucky I am to know someone like you. Your presence brings a kind of brightness that makes everything feel a little more special.</p>
+                <p class="text">I find myself often thinking about you, and every time I do, it puts a smile on my face. There's something about your kindness and warmth that I truly appreciate, and I'm excited to see where this journey takes us.</p>
+                <p class="text">For now, just know that you mean a lot to me.</p>
+                <p class="text" style="margin-top: 20px;">With warmest thoughts,<br> <strong style="font-size: 0.9em;">[Emmanuel Kayemba]</strong></p> 
             </div>
-            
-            <div class="heart"></div>
         </div>
-
+        <div class="heart"></div>
     </div>
 
-    <script src="script.js"></script>r
+    <div class="float-text" id="float">
+        <span>I</span>
+        <div class="big-heart"></div>
+        <span>You Bingi</span>
+    </div>
+
+    <!-- Pop-ups -->
+    <div class="popup popup-open" id="popup-open">
+        <p>Click the envelope to open it!</p>
+    </div>
+    <div class="popup popup-close" id="popup-close">
+        <p>Tap the letter to close the envelope!</p>
+    </div>
+</main>
+    <!-- Audio for sound effects -->
+    <audio id="open-sound" src="open.wav"></audio>
+    <audio id="close-sound" src="close-sound.wav"></audio>
+
+    <script src="script.js"></script>
 </body>
 </html>
